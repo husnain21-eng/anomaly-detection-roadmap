@@ -1,0 +1,5 @@
+Trend: the slow, long-term rise or fall in the level of the data. In your Day 33 series, the trend rose steadily from about 101 to about 115 over 7 days.
+Seasonality: a pattern that repeats at a fixed interval. Your series had a daily cycle of 24 hours, swinging about 20 above and below the trend.
+Autocorrelation: how strongly a series is related to its own past values at a given lag. The spike of about 0.8 at lag 24 means each hour looks like the same hour one day earlier, so the cycle is 24 hours.
+Residual: what is left after you remove the trend and the seasonal pattern. In normal data it is small random noise, so a point with an unusually large residual is a strong anomaly candidate. Checking residuals works better than checking raw values, because raw values rise and fall all the time even when nothing is wrong.
+FFT on the quasi-periodic signal: it showed two clear peaks, near ω = 1 and ω = 1.4 (the true values are 1 and √2 ≈ 1.414). So a signal that never repeats exactly is still made of two simple frequencies, and the FFT can find them.
